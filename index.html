@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SocketIO</title>
+        <link href="/style/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="/style/index.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="main">
+            <div id="title">
+                <h3>基于SocketIO的即时聊天室</h3>
+            </div>
+            <div id="content">
+                <div id="chat_content">
+                    <div id="chat_mian">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">会话</div>
+                            <div class="panel-body session" id="session">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="online_user">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">在线用户</div>
+                            <div class="panel-body online_usr_list">
+                                <ul class="list-group" id="user_list">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="chat_input">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="chat_buffer">
+                        <span class="input-group-addon">@<span id="user_name">匿名用户</span></span>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                推荐使用支持HTML5的浏览器浏览，尽管SocketIO支持IE5.5+。
+            </div>
+        </div>
+        <div class="modal fade" id="user_name_input" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">请输入用户名</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input class="form-control input-lg" id="user_name_init" type="text"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="user_name_confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/socket.io.min.js"></script>
+        <script src="/js/jquery-1.11.0.min.js"></script>
+        <script src="/js/underscore-min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/mustache.js"></script>
+        <script src="/js/index.js"></script>
+        <script id="msg_box_from_me" type="text/template">
+            <div class="input-group from_me">
+                <span class="form-control">{{message}}</span>
+                <span class="input-group-addon">@{{user_name}}</span>
+            </div>
+        </script>
+        <script id="msg_box_from_origin" type="text/template">
+            <div class="input-group from_origin">
+                <span class="input-group-addon">{{user_name}}:</span>
+                <span class="form-control">{{message}}</span>
+            </div>
+        </script>
+        <script id="user_list_item" type="text/template">
+            {{#user_list}}
+            <li class="list-group-item" user_id="{{user_id}}">{{user_name}}<span class="status"></span></div></li>
+            {{/user_list}}
+        </script>
+    </body>
+</html>

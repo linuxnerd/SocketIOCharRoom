@@ -1,0 +1,42 @@
+.clear{
+    clear : both;
+}
+#main{
+    margin : 0 auto;
+    width : 1000px;
+}
+#content{
+    margin-bottom : 20px;
+}
+#chat_mian{
+    width : 660px;
+    float : left;
+}
+#online_user{
+    width : 300px;
+    float : right;
+}
+#chat_content{
+    border-radius : 10px;
+    background : #EEEEEE;
+    margin-bottom : 20px;
+    padding : 10px;
+}
+.session, .online_usr_list{
+    height : 500px;
+    overflow-y : scroll;
+}
+.from_me{
+    width : 480px;
+    float : right;
+    margin-bottom : 20px;
+}
+.from_origin{
+    width : 480px;
+    float : left;
+    margin-bottom : 20px;
+}
+.status{
+    color : #996633;
+    font-size : 12px;
+}
