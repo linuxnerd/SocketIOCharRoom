@@ -1,4 +1,2 @@
-SocketIOCharRoom
+基于SocketIO的即时聊天室
 ================
-
-A simple SocketIO demo
