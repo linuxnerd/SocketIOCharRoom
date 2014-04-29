@@ -1,9 +1,9 @@
 var app = require('http').createServer(),
     io = require('socket.io').listen(app),
-    fs = require('fs');
-    app.listen(9000),
     util = require("util"),
+    fs = require('fs'),
     user_list = {};
+app.listen(9000);
 
 
 io.sockets.on('connection', function (socket) {
