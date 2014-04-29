@@ -32,7 +32,7 @@
                 </div>
                 <div id="chat_input">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="chat_buffer">
+                        <input type="text" class="form-control" id="chat_buffer" placeholder="按下回车键发送消息" />
                         <span class="input-group-addon">@<span id="user_name">匿名用户</span></span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <h4 class="modal-title">请输入用户名</h4>
                     </div>
                     <div class="modal-body">
-                        <input class="form-control input-lg" id="user_name_init" type="text"/>
+                        <input class="form-control input-lg" id="user_name_init" placeholder="默认为{{匿名用户}}" type="text"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal" id="user_name_confirm">确定</button>
