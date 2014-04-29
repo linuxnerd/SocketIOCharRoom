@@ -8,11 +8,9 @@ $(function (){
     //
     var win = window,
         doc = document,
-        socket,
+        socket = io.connect(chat_config.protocol + chat_config.remote_ip + ":" + chat_config.remote_port);
         user_data = {},
         user_name = $("#user_name"),
-        remote_ip = "192.168.33.10",
-        remote_port = 9000,
         chat_buffer = $("#chat_buffer"),
         chat_submit = $("#chat_submit"),
         modal = $("#user_name_input"),
@@ -31,7 +29,6 @@ $(function (){
                s4() + '-' + s4() + s4() + s4();
     }
     user_data.user_id = id_creater();
-    socket = io.connect("http://" + remote_ip + ":" + remote_port);
     modal.modal();
 
     function login_callback(e){

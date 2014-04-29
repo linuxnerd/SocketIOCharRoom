@@ -1,0 +1,17 @@
+{
+  "family": "SocketIO",
+  "name": "ChatRoom",
+  "description": "A demo based on SocketIO",
+  "version": "0.0.1",
+  "author": {
+    "name": "Tonni",
+    "url": "houcoder.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:HouCoder/SocketIOCharRoom.git"
+  },
+  "devDependencies": {
+    "socket.io": "^0.9.16"
+  }
+}
