@@ -6,16 +6,13 @@ $(function (){
     // 3 => 用户注销
     //
     //
-    // TODO:
-    // - 打开页面用户名输入框焦点必须自动在输入框
-    // - 输入用户名后焦点在消息输入框
     var win = window,
         doc = document,
         socket,
         user_data = {},
         user_name = $("#user_name"),
         remote_ip = "192.168.33.10",
-        remote_port = 9000
+        remote_port = 9000,
         chat_buffer = $("#chat_buffer"),
         chat_submit = $("#chat_submit"),
         modal = $("#user_name_input"),
@@ -61,7 +58,8 @@ $(function (){
         modal.modal("hide");
     });
     user_name_confirm.bind("click", login_callback);
-    chat_buffer.bind("keypress", function(e){
+
+    chat_buffer.bind("keypress keyup", function(e){
         if(!user_data.user_name){
             login_callback();
         }

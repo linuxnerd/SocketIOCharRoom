@@ -1,6 +1,6 @@
 var app = require('http').createServer(),
     io = require('socket.io').listen(app),
-    fs = require('fs')
+    fs = require('fs');
     app.listen(9000),
     util = require("util"),
     user_list = {};
@@ -21,7 +21,6 @@ io.sockets.on('connection', function (socket) {
         socket.broadcast.emit('send_message', data);
     });
     socket.on('exit', function (data){
-        console.info("exiting......");
         delete user_list[data.user_id];
         socket.broadcast.emit('exit', data);
     });
