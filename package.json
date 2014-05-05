@@ -7,9 +7,12 @@
     "name": "Tonni",
     "url": "houcoder.github.io"
   },
+  "script": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:HouCoder/SocketIOCharRoom.git"
+    "url": "git@github.com:linuxnerd/SocketIOCharRoom.git"
   },
   "devDependencies": {
     "socket.io": "^0.9.16"

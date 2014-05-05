@@ -3,7 +3,7 @@ var app = require('http').createServer(),
     util = require("util"),
     fs = require('fs'),
     user_list = {};
-app.listen(9000);
+app.listen(process.env.PORT || 5000);
 
 
 io.sockets.on('connection', function (socket) {
